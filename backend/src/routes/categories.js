@@ -6,19 +6,37 @@ import {
 	updateCategory,
 } from '../controllers/categories.js';
 import catchedErrors from '../utils/catchedErrors.js';
+import accessTokenValidation from '../middelware/accessTokenValidation.js';
+import refreshTokenValidation from '../middelware/refreshTokenValidation.js';
 
 const categoryRouter = Router();
 
 // GET
-categoryRouter.get('/', catchedErrors(getAll));
+categoryRouter.get(
+	'/',
+	[accessTokenValidation, refreshTokenValidation],
+	catchedErrors(getAll),
+);
 
 // CREATE
-categoryRouter.post('/', catchedErrors(createCategory));
+categoryRouter.post(
+	'/',
+	[accessTokenValidation, refreshTokenValidation],
+	catchedErrors(createCategory),
+);
 
 //DELETE
-categoryRouter.delete('/:id', catchedErrors(deleteCategory));
+categoryRouter.delete(
+	'/:id',
+	[accessTokenValidation, refreshTokenValidation],
+	catchedErrors(deleteCategory),
+);
 
 //UPDATE
-categoryRouter.patch('/:id', catchedErrors(updateCategory));
+categoryRouter.patch(
+	'/:id',
+	[accessTokenValidation, refreshTokenValidation],
+	catchedErrors(updateCategory),
+);
 
 export default categoryRouter;

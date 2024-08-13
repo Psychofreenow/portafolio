@@ -7,20 +7,42 @@ import {
 	updateArticle,
 } from '../controllers/articles.js';
 import catchedErrors from '../utils/catchedErrors.js';
+import accessTokenValidation from '../middelware/accessTokenValidation.js';
+import refreshTokenValidation from '../middelware/refreshTokenValidation.js';
 
 const articleRouter = Router();
 
 // GET
-articleRouter.get('/', catchedErrors(getAll));
-articleRouter.get('/:id', catchedErrors(getById));
+articleRouter.get(
+	'/',
+	[accessTokenValidation, refreshTokenValidation],
+	catchedErrors(getAll),
+);
+articleRouter.get(
+	'/:id',
+	[accessTokenValidation, refreshTokenValidation],
+	catchedErrors(getById),
+);
 
 // CREATE
-articleRouter.post('/', catchedErrors(createArticle));
+articleRouter.post(
+	'/',
+	[accessTokenValidation, refreshTokenValidation],
+	catchedErrors(createArticle),
+);
 
 // DELETE
-articleRouter.delete('/:id', catchedErrors(deleteArticle));
+articleRouter.delete(
+	'/:id',
+	[accessTokenValidation, refreshTokenValidation],
+	catchedErrors(deleteArticle),
+);
 
 // UPDATE
-articleRouter.patch('/:id', catchedErrors(updateArticle));
+articleRouter.patch(
+	'/:id',
+	[accessTokenValidation, refreshTokenValidation],
+	catchedErrors(updateArticle),
+);
 
 export default articleRouter;

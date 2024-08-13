@@ -6,8 +6,11 @@ import Categories from '../database/models/Categories.js';
 import Articles from '../database/models/Articles.js';
 import Article_categories from '../database/models/Article_categories.js';
 import preCreateData from '../utils/preCreateData.js';
+import encryptedPassword from '../utils/encryptedPassword.js';
 
 const updateTables = async () => {
+	const newPassword = await encryptedPassword({ input: '123456789', salt: 10 });
+
 	if (NODE_ENV !== 'PRODUCTION') {
 		try {
 			await sequelize.sync({ force: true });
@@ -38,8 +41,17 @@ const updateTables = async () => {
 					last_name: 'martinez',
 					username: 'joma',
 					email: 'jose@gmail.com',
-					password: '123456789',
+					password: newPassword,
 					rol_id: 2,
+				},
+				{
+					user_id: '8a444ade-d285-4335-9584-0e6a1e6fe8eb',
+					first_name: 'josea',
+					last_name: 'martineza',
+					username: 'jomaa',
+					email: 'josea@gmail.com',
+					password: newPassword,
+					rol_id: 1,
 				},
 			]);
 

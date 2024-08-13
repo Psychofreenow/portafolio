@@ -6,11 +6,16 @@ import categoryRouter from './routes/categories.js';
 import userRouter from './routes/users.js';
 import authRouter from './routes/auth.js';
 import cookieParser from 'cookie-parser';
+import helmet from 'helmet';
+import cors from 'cors';
+import { CORS_DOMAIN } from './config/env.js';
 
 //MIDDELWARE
 app.use(json());
 app.use(urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(helmet());
+app.use(cors(CORS_DOMAIN));
 
 // ROUTES
 app.use('/api/articles', articleRouter);

@@ -6,18 +6,23 @@ import {
 } from '../utils/errors.js';
 
 const errorsHandle = (err, req, res, next) => {
-	console.log(err);
 	if (err instanceof ValidationError) {
-		responseError(res, err.statusCode, err.completeErrors);
+		return responseError(res, err.statusCode, err.completeErrors);
 	}
 
 	if (err instanceof ClientError) {
-		responseError(res, err.statusCode, err.message);
+		return responseError(res, err.statusCode, err.message);
 	}
 
 	if (err instanceof UnauthorizedError) {
-		responseError(res, err.statusCode, err.message);
+		return responseError(res, err.statusCode, err.message);
 	}
+
+	if (err.name === 'JsonWebTokenError') {
+		return responseError(res, 401, err.message);
+	}
+
+	responseError(res, 400, err.message);
 };
 
 export default errorsHandle;

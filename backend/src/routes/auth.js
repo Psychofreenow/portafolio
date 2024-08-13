@@ -1,26 +1,22 @@
 import { Router } from 'express';
-import { register, login } from '../controllers/auth.js';
+import { register, login, logout, refreshToken } from '../controllers/auth.js';
 import catchedErrors from '../utils/catchedErrors.js';
-import userRegisterValidation from '../middelware/userRegisterValidation.js';
-import userExist from '../middelware/userExist.js';
+import userRegisterExist from '../middelware/userRegisterExist.js';
+import userLoginExist from '../middelware/userLoginExist.js';
 
 const authRouter = Router();
 
 // REGISTER
-authRouter.post(
-	'/register',
-	[userRegisterValidation, userExist],
-	catchedErrors(register),
-);
+authRouter.post('/register', userRegisterExist, catchedErrors(register));
 
 // LOGIN
-authRouter.post('/login', catchedErrors(login));
+authRouter.post('/login', userLoginExist, catchedErrors(login));
 
 // LOGOUT
-// authRouter.post();
+authRouter.post('/logout', logout);
 
 //REFRESH TOKEN
-// authRouter.get('/refresh-token');
+authRouter.get('/refresh-token', catchedErrors(refreshToken));
 
 // GOOGLE
 
