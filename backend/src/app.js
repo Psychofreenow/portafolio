@@ -1,6 +1,7 @@
 import express, { json, urlencoded } from 'express';
 const app = express();
 import errorsHandle from './middelware/errorsHandle.js';
+import projectRouter from './routes/projects.js';
 import articleRouter from './routes/articles.js';
 import categoryRouter from './routes/categories.js';
 import userRouter from './routes/users.js';
@@ -18,6 +19,7 @@ app.use(helmet());
 app.use(cors(CORS_DOMAIN));
 
 // ROUTES
+app.use('/api/projects', projectRouter);
 app.use('/api/articles', articleRouter);
 app.use('/api/categories', categoryRouter);
 app.use('/api/users', userRouter);

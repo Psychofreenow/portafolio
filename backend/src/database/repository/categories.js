@@ -1,3 +1,4 @@
+import sequelize from '../../config/sequelize.js';
 import { ClientError } from '../../utils/errors.js';
 import Categories from '../models/Categories.js';
 
@@ -13,9 +14,11 @@ export const getAllRepository = async () => {
 };
 
 export const createRespository = async ({ body }) => {
-	const { category } = body;
+	const { categories } = body;
 
-	await Categories.create({ category });
+	for (const category of categories) {
+		await Categories.create({ category });
+	}
 
 	return {
 		msg: 'category was successfully created',
@@ -28,8 +31,6 @@ export const deleteRespository = async ({ id }) => {
 	const categoriesExist = await Categories.findOne({
 		where: { category_id: id },
 	});
-
-	// return console.log(categoriesExist);
 
 	if (!categoriesExist)
 		throw new ClientError(

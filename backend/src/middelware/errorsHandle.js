@@ -6,6 +6,7 @@ import {
 } from '../utils/errors.js';
 
 const errorsHandle = (err, req, res, next) => {
+	console.log(err);
 	if (err instanceof ValidationError) {
 		return responseError(res, err.statusCode, err.completeErrors);
 	}

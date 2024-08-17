@@ -5,6 +5,9 @@ import Roles from '../database/models/Roles.js';
 import Categories from '../database/models/Categories.js';
 import Articles from '../database/models/Articles.js';
 import Article_categories from '../database/models/Article_categories.js';
+import Projects from '../database/models/Projects.js';
+import Technologies from '../database/models/technologies.js';
+import Project_technologies from '../database/models/Project_technologies.js';
 import preCreateData from '../utils/preCreateData.js';
 import encryptedPassword from '../utils/encryptedPassword.js';
 
@@ -15,6 +18,58 @@ const updateTables = async () => {
 		try {
 			await sequelize.sync({ force: true });
 			console.log('Synchronized tables');
+
+			//Default Technologies
+			await preCreateData(Technologies, [
+				{ technology: 'Javascript' },
+				{ technology: 'Reactjs' },
+				{ technology: 'CSS' },
+				{ technology: 'Vuejs' },
+				{ technology: 'Angularjs' },
+				{ technology: 'SQL' },
+			]);
+
+			//Default projects
+			await preCreateData(Projects, [
+				{
+					name: 'hola1',
+					repository: 'https://github.com/Psychofreenow/portafolio',
+					client: 'Franklinfreenow',
+					client_src: 'https://github.com/Psychofreenow/portafolio',
+				},
+				{
+					name: 'hola2',
+					repository: 'https://github.com/Psychofreenow/portafolio',
+					client: 'Franklinfreenow',
+					client_src: 'https://github.com/Psychofreenow/portafolio',
+				},
+				{
+					name: 'hola3',
+					repository: 'https://github.com/Psychofreenow/portafolio',
+					client: 'Franklinfreenow',
+					client_src: 'https://github.com/Psychofreenow/portafolio',
+				},
+			]);
+
+			// Default project_technologies
+			await preCreateData(Project_technologies, [
+				{
+					technology_id: 1,
+					project_id: 1,
+				},
+				{
+					technology_id: 2,
+					project_id: 2,
+				},
+				{
+					technology_id: 3,
+					project_id: 3,
+				},
+				{
+					technology_id: 1,
+					project_id: 2,
+				},
+			]);
 
 			// Default roles
 			await preCreateData(Roles, [

@@ -50,11 +50,13 @@ const Users = sequelize.define(config.alias, config.attributes, config.options);
 Users.belongsTo(Roles, {
 	foreignKey: 'rol_id',
 	onDelete: 'CASCADE',
+	onUpdate: 'CASCADE',
 });
 
 Users.hasOne(Articles, {
 	foreignKey: 'user_id',
 	onDelete: 'CASCADE',
+	onUpdate: 'CASCADE',
 });
 
 export default Users;

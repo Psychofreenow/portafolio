@@ -2,28 +2,28 @@ import sequelize from '../../config/sequelize.js';
 import { DataTypes } from 'sequelize';
 
 const config = {
-	alias: 'article_category',
+	alias: 'project_technology',
 	attributes: {
-		article_id: {
+		technology_id: {
 			type: DataTypes.INTEGER,
-			allowNull: false,
+			allowNull: true,
 			primaryKey: true,
 		},
-		category_id: {
+		project_id: {
 			type: DataTypes.INTEGER,
-			allowNull: false,
+			allowNull: true,
 			primaryKey: true,
 		},
 	},
 	options: {
-		tableName: 'article_categories',
+		tableName: 'project_technologies',
 	},
 };
 
-const Article_categories = sequelize.define(
+const Project_technologies = sequelize.define(
 	config.alias,
 	config.attributes,
 	config.options,
 );
 
-export default Article_categories;
+export default Project_technologies;

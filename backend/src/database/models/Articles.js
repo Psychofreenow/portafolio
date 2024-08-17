@@ -44,6 +44,8 @@ Articles.belongsToMany(Categories, {
 	},
 	foreignKey: 'article_id',
 	otherKey: 'category_id',
+	onUpdate: 'NO ACTION',
+	onDelete: 'CASCADE',
 });
 
 export default Articles;
