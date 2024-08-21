@@ -12,10 +12,10 @@ function ProjectProvider({ children }) {
 		`${import.meta.env.VITE_HOST}/api/projects/`,
 	);
 
-	console.log(data);
-	// if (loading) return <div>cargando...</div>;
 	return (
-		<projectContext.Provider value={'hol'}>{children}</projectContext.Provider>
+		<projectContext.Provider value={{ data, loading, error }}>
+			{children}
+		</projectContext.Provider>
 	);
 }
 

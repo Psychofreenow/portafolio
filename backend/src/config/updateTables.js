@@ -34,18 +34,24 @@ const updateTables = async () => {
 				{
 					name: 'hola1',
 					repository: 'https://github.com/Psychofreenow/portafolio',
+					images:
+						'https://pcfcdn.kommo.com/static/assets/images/integrations/en/paypal-logo-promo.png',
 					client: 'Franklinfreenow',
 					client_src: 'https://github.com/Psychofreenow/portafolio',
 				},
 				{
 					name: 'hola2',
 					repository: 'https://github.com/Psychofreenow/portafolio',
+					images:
+						'https://pcfcdn.kommo.com/static/assets/images/integrations/en/paypal-logo-promo.png',
 					client: 'Franklinfreenow',
 					client_src: 'https://github.com/Psychofreenow/portafolio',
 				},
 				{
 					name: 'hola3',
 					repository: 'https://github.com/Psychofreenow/portafolio',
+					images:
+						'https://pcfcdn.kommo.com/static/assets/images/integrations/en/paypal-logo-promo.png',
 					client: 'Franklinfreenow',
 					client_src: 'https://github.com/Psychofreenow/portafolio',
 				},
