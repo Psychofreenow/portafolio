@@ -7,7 +7,10 @@
     "frontend/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ga": "git add .",
+    "gcm": "git commit -m",
+    "gp": "git push"
   },
   "author": "",
   "license": "ISC",
