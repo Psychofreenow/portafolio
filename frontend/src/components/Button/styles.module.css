@@ -1,0 +1,102 @@
+.button {
+	font-size: var(--fs-md);
+	font-weight: var(--fw-title);
+	text-transform: capitalize;
+	border-radius: 2rem;
+	width: fit-content;
+	transition: ease 0.5s;
+	text-align: center;
+}
+
+.button > a,
+button {
+	text-decoration: none;
+	color: inherit;
+	width: inherit;
+	background-color: inherit;
+	border-radius: inherit;
+	font-size: inherit;
+	display: block;
+	padding: 1rem 2rem;
+	cursor: pointer;
+}
+
+/*TYPE BUTTONS*/
+
+/*WHITE*/
+.typeWhite {
+	background-color: var(--c-generic);
+	color: var(--c-tertiary);
+	transition: ease 0.5s;
+}
+
+.typeWhite:hover {
+	background-color: var(--c-tertiary);
+	color: var(--c-generic);
+	transition: ease 0.5s;
+}
+
+/*DARK*/
+
+.typeDark {
+	background-color: var(--c-tertiary);
+	color: var(--c-generic);
+	transition: ease 0.5s;
+}
+
+.typeDark:hover {
+	background-color: var(--c-generic);
+	color: var(--c-tertiary);
+	transition: ease 0.5s;
+}
+
+/*TRANSPARENT*/
+
+.typeTransparent {
+	background-color: initial;
+	border-radius: initial;
+	font-weight: var(--fw-regular);
+	font-size: var(--fs-md);
+	color: var(--c-secondary);
+	border-bottom: solid 2px transparent;
+	border-right: solid 2px transparent;
+	transition: ease 0.5s;
+}
+
+.typeTransparent:hover {
+	border-bottom: solid 2px var(--c-primary);
+	border-right: solid 2px var(--c-primary);
+	transition: ease 0.5s;
+}
+
+/*RED*/
+
+.typeRed {
+	background-color: var(--c-primary);
+	color: var(--c-generic);
+	transition: ease 0.5s;
+}
+
+.typeRed:hover {
+	background-color: var(--c-generic);
+	color: var(--c-primary);
+	transition: ease 0.5s;
+}
+
+/* TYPE SIZE */
+/* 
+.md {
+	width: calc(fit-content + 10rem);
+}
+
+.lg {
+	width: calc(fit-content + 14rem);
+}
+
+.xl {
+	width: calc(fit-content + 18rem);
+} */
+
+.center {
+	margin: 0 auto;
+}

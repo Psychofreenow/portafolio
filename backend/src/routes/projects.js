@@ -16,12 +16,12 @@ const projectRouter = Router();
 // GET
 projectRouter.get(
 	'/',
-	[accessTokenValidation, refreshTokenValidation],
+	// [accessTokenValidation, refreshTokenValidation],
 	catchedErrors(getAll),
 );
 projectRouter.get(
 	'/:id',
-	[accessTokenValidation, refreshTokenValidation],
+	// [accessTokenValidation, refreshTokenValidation],
 	catchedErrors(getById),
 );
 
@@ -40,7 +40,7 @@ projectRouter.post(
 // DELETE
 projectRouter.delete(
 	'/:id',
-	[accessTokenValidation, refreshTokenValidation],
+	// [accessTokenValidation, refreshTokenValidation],
 	catchedErrors(deleteProject),
 );
 

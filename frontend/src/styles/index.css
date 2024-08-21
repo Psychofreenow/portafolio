@@ -1,0 +1,40 @@
+:root {
+	/*FONTS*/
+	--primary-font: 'ralaway', sans-serif;
+
+	/* FONTS WEIGHTS */
+	--fw-title: 900;
+	--fw-subtitle: 700;
+	--fw-regular: 400;
+	--fw-thin: 200;
+
+	/*FONT SIZES*/
+	--fs-sm: clamp(0.8rem, -0.12vi + 0.83rem, 0.73rem);
+	--fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+	--fs-md: clamp(1.25rem, 1.22vi + 0.94rem, 1.92rem);
+	--fs-lg: clamp(1.56rem, 2.81vi + 0.86rem, 3.11rem);
+	--fs-xl: clamp(1.95rem, 5.59vi + 0.55rem, 5.03rem);
+	--fs-xxl: clamp(2.44rem, 10.36vi + -0.15rem, 8.14rem);
+	--fs-xxxl: clamp(3.05rem, 18.39vi + -1.55rem, 13.17rem);
+
+	/*COLORS*/
+	--c-primary: #b20c06;
+	--c-secondary: #101010;
+	--c-tertiary: #738589;
+	--c-generic: #fdffff;
+}
+
+* {
+	border: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/* outline: 1px solid rgb(205, 50, 50) !important; */
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	font-family: var(--primary-font);
+	font-weight: var(--fw-regular);
+	/* background-color: #101010; */
+}

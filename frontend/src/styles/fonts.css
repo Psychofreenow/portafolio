@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'ralaway';
+	src: url(../assets/fonts/Raleway-Bold.ttf);
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: 'ralaway';
+	src: url(../assets/fonts/Raleway-Medium.ttf);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'ralaway';
+	src: url(../assets/fonts/Raleway-Regular.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'ralaway';
+	src: url(../assets/fonts/Raleway-Light.ttf);
+	font-weight: 200;
+}
