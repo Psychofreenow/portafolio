@@ -55,6 +55,19 @@
 }
 
 /*Project*/
+.projects {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.projects h4 {
+	font-weight: var(--fw-title);
+	font-size: var(--fs-md);
+	color: var(--c-secondary);
+	text-align: center;
+}
 
 /*About*/
 .about {

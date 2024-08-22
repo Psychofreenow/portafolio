@@ -1,11 +1,13 @@
 .card {
 	width: 100%;
+	max-width: 40rem;
 	height: 30rem;
 	background-color: var(--c-generic);
 	border-radius: 1.8rem;
 	box-shadow: 10px 10px 37px -17px rgba(0, 0, 0, 0.62);
 	-webkit-box-shadow: 10px 10px 37px -17px rgba(0, 0, 0, 0.62);
 	-moz-box-shadow: 10px 10px 37px -17px rgba(0, 0, 0, 0.62);
+	cursor: pointer;
 }
 
 .cardImg {
@@ -22,4 +24,22 @@
 	font-weight: var(--fw-title);
 	text-transform: capitalize;
 	padding: 1rem;
+}
+
+.tags {
+	display: flex;
+	gap: 0.25rem;
+	padding: 1rem;
+}
+
+.tags span {
+	border: solid 1px var(--c-tertiary);
+	font-weight: var(--fw-title);
+	font-size: var(--fs-base);
+	border-radius: 2rem;
+	padding: 0.2rem;
+}
+
+.tags span::first-letter {
+	color: var(--c-primary);
 }
