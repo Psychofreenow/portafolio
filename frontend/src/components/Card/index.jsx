@@ -1,13 +1,16 @@
 import styles from './styles.module.css';
 import Tags from './Tags';
 
-function Card({ name, image, tags }) {
+function Card({ children, name, image, tags, onClick }) {
 	return (
-		<figure className={styles.card}>
-			<img src={image} alt={name} className={styles.cardImg} />
-			<p className={styles.cardTitle}>{name}</p>
-			<Tags tags={tags} />
-		</figure>
+		<>
+			{children}
+			<figure className={styles.card} onClick={onClick}>
+				<img src={image} alt={name} className={styles.cardImg} />
+				<p className={styles.cardTitle}>{name}</p>
+				<Tags tags={tags} />
+			</figure>
+		</>
 	);
 }
 

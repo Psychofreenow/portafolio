@@ -17,9 +17,13 @@ const config = {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
+		descriptionOfProject: {
+			type: DataTypes.TEXT,
+			allowNull: false,
+		},
 		images: {
 			type: DataTypes.JSON,
-			allowNull: true,
+			allowNull: false,
 		},
 		repository: {
 			type: DataTypes.STRING,

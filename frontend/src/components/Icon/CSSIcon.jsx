@@ -1,8 +1,8 @@
 import Icon from '.';
 
-function CSSIcon({ title, typeIcon }) {
+function CSSIcon({ title, typeIcon, color, onClick, st }) {
 	return (
-		<Icon title={title} typeIcon={typeIcon}>
+		<Icon title={title} typeIcon={typeIcon} onClick={onClick} st={st}>
 			<svg
 				viewBox='0 0 32 32'
 				fill='currentColor'

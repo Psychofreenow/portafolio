@@ -1,7 +1,7 @@
 import styles from './styles.module.css';
 import { clsx } from 'clsx';
 
-function Button({ children, typeBtn, size, center }) {
+function Button({ children, typeBtn, size, center, onClick }) {
 	const classNames = clsx(
 		{
 			[styles.button]: true,
@@ -19,6 +19,10 @@ function Button({ children, typeBtn, size, center }) {
 			[styles.center]: center === true,
 		},
 	);
-	return <div className={classNames}>{children}</div>;
+	return (
+		<div className={classNames} onClick={onClick}>
+			{children}
+		</div>
+	);
 }
 export default Button;

@@ -5,17 +5,19 @@ import MyHabilities from './MyHabilities';
 import Footer from './Footer';
 import Projects from './Projects';
 import ProjectProvider from '../../context/ProjectProvider';
+import Contact from './Contact';
 
 function HomePage() {
 	return (
 		<main className={styles.main}>
+			<Hero />
 			<ProjectProvider>
-				<Hero />
 				<Projects />
-				<About />
-				<MyHabilities />
-				<Footer />
 			</ProjectProvider>
+			<About />
+			<MyHabilities />
+			<Contact />
+			<Footer />
 		</main>
 	);
 }

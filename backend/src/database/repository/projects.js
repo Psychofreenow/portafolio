@@ -11,7 +11,15 @@ export const getAllRepository = async ({ technology }) => {
 	// All projects
 	if (!technology) {
 		const projects = await Projects.findAll({
-			attributes: ['project_id', 'images', 'name'],
+			attributes: [
+				'project_id',
+				'name',
+				'descriptionOfProject',
+				'images',
+				'repository',
+				'client',
+				'client_src',
+			],
 			include: [
 				{
 					model: Technologies,
@@ -28,7 +36,15 @@ export const getAllRepository = async ({ technology }) => {
 
 	// articles by category
 	const projects = await Projects.findAll({
-		attributes: ['name'],
+		attributes: [
+			'project_id',
+			'name',
+			'descriptionOfProject',
+			'images',
+			'repository',
+			'client',
+			'client_src',
+		],
 		include: [
 			{
 				model: Technologies,
@@ -55,7 +71,15 @@ export const getAllRepository = async ({ technology }) => {
 export const getByIdRepository = async ({ id }) => {
 	// Projects by ID
 	const project = await Projects.findOne({
-		attributes: ['project_id', 'images', 'name'],
+		attributes: [
+			'project_id',
+			'name',
+			'descriptionOfProject',
+			'images',
+			'repository',
+			'client',
+			'client_src',
+		],
 		where: {
 			project_id: id,
 		},

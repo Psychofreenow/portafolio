@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import fetchingData from '../utils/fetchingData';
 
-function useFetch(URL) {
+function useFetch(URL, options) {
 	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
@@ -9,7 +9,10 @@ function useFetch(URL) {
 	useEffect(() => {
 		const fetching = async () => {
 			try {
-				const res = await fetchingData({ URL });
+				const res = await fetchingData({
+					URL,
+					options,
+				});
 				setData(res);
 			} catch (error) {
 				setError(error);

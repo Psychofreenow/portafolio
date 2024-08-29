@@ -1,8 +1,8 @@
 import Icon from '.';
 
-function ReactIcon({ title, typeIcon }) {
+function ReactIcon({ title, typeIcon, color, onClick, st }) {
 	return (
-		<Icon title={title} typeIcon={typeIcon}>
+		<Icon title={title} typeIcon={typeIcon} onClick={onClick} st={st}>
 			<svg
 				viewBox='0 -14 256 256'
 				version='1.1'

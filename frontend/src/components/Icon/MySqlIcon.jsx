@@ -1,8 +1,8 @@
 import Icon from '.';
 
-function MySqlIcon({ title, typeIcon }) {
+function MySqlIcon({ title, typeIcon, color, onClick, st }) {
 	return (
-		<Icon title={title} typeIcon={typeIcon}>
+		<Icon title={title} typeIcon={typeIcon} onClick={onClick} st={st}>
 			<svg
 				viewBox='0 -2 256 256'
 				version='1.1'

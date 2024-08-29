@@ -1,8 +1,8 @@
 import Icon from '.';
 
-function ExpressIcon({ title, typeIcon }) {
+function ExpressIcon({ title, typeIcon, color, onClick, st }) {
 	return (
-		<Icon title={title} typeIcon={typeIcon}>
+		<Icon title={title} typeIcon={typeIcon} onClick={onClick} st={st}>
 			<svg
 				viewBox='0 -181.5 512 512'
 				version='1.1'

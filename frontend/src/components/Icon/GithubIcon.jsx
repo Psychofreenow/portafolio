@@ -1,8 +1,8 @@
 import Icon from '.';
 
-function GithubIcon({ title, typeIcon, color }) {
+function GithubIcon({ title, typeIcon, color, onClick, st }) {
 	return (
-		<Icon title={title} typeIcon={typeIcon}>
+		<Icon title={title} typeIcon={typeIcon} onClick={onClick} st={st}>
 			<svg
 				viewBox='0 0 20 20'
 				version='1.1'
@@ -12,7 +12,6 @@ function GithubIcon({ title, typeIcon, color }) {
 					fill: `${color}`,
 				}}
 			>
-				<title>github [#142]</title>
 				<desc>Created with Sketch.</desc>
 				<defs></defs>
 				<g id='Page-1' stroke='none' strokeWidth='1' fillRule='evenodd'>

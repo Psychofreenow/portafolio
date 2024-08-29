@@ -1,8 +1,8 @@
 import Icon from '.';
 
-function NodeIcon({ title, typeIcon }) {
+function NodeIcon({ title, typeIcon, color, onClick, st }) {
 	return (
-		<Icon title={title} typeIcon={typeIcon}>
+		<Icon title={title} typeIcon={typeIcon} onClick={onClick} st={st}>
 			<svg
 				viewBox='-16.5 0 289 289'
 				version='1.1'

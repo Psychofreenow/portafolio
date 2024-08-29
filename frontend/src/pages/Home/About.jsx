@@ -1,5 +1,5 @@
-import ButtonGeneric from '../../components/Button/ButtonGeneric';
 import styles from './styles.module.css';
+import ButtonAnchor from '../../components/Button/ButtonAnchor';
 
 function About() {
 	return (
@@ -24,10 +24,10 @@ function About() {
 						<span> cuyo principal enfoque es la satisfacción del cliente.</span>
 					</p>
 					<p>
-						Te invito a <span>cotizar mis servicios</span> y descubrir la mejor
-						manera de hacer realidad tu idea. ¡Te espero!
+						Te invito a <span>contáctarme</span> y descubre la mejor manera de
+						hacer realidad tu idea. ¡Te espero!
 					</p>
-					<ButtonGeneric buttonText='Cotizar ahora' typeBtn='red' />
+					<ButtonAnchor buttonText='Contáctame' href='#contact' typeBtn='red' />
 				</div>
 			</section>
 		</>

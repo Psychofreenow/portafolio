@@ -8,6 +8,12 @@
 	-webkit-box-shadow: 10px 10px 37px -17px rgba(0, 0, 0, 0.62);
 	-moz-box-shadow: 10px 10px 37px -17px rgba(0, 0, 0, 0.62);
 	cursor: pointer;
+	transition: ease 0.5s;
+}
+
+.card:hover {
+	width: 38rem;
+	height: 31rem;
 }
 
 .cardImg {

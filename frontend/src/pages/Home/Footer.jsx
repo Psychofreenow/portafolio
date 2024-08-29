@@ -6,8 +6,7 @@ import ButtonAnchor from '../../components/Button/ButtonAnchor';
 
 function Footer() {
 	const LINKS = {
-		instagram:
-			'https://www.instagram.com/franklinfreenow?igsh=a3p3cDQweW1yNWZz',
+		instagram: 'https://www.instagram.com/franklinfreenow/',
 		github: 'https://github.com/Psychofreenow',
 		linkedin: 'https://www.linkedin.com/in/franklin-m%C3%A1rquez-b95314261/',
 	};
@@ -19,15 +18,24 @@ function Footer() {
 						Portafolio
 					</a>
 					<div className={styles.socialLinks}>
-						<ButtonAnchor typeBtn='transparent' href={LINKS.instagram}>
-							<InstagramIcon typeIcon='sm' color='#ffffff' />
-						</ButtonAnchor>
-						<ButtonAnchor typeBtn='transparent' href={LINKS.github}>
-							<GithubIcon typeIcon='sm' color='#ffffff' />
-						</ButtonAnchor>
-						<ButtonAnchor typeBtn='transparent' href={LINKS.linkedin}>
-							<Linkedin typeIcon='sm' color='#ffffff' />
-						</ButtonAnchor>
+						<ButtonAnchor
+							typeBtn='transparent'
+							href={LINKS.instagram}
+							target='_blank'
+							icon={<InstagramIcon typeIcon='sm' color='#ffffff' />}
+						/>
+						<ButtonAnchor
+							typeBtn='transparent'
+							href={LINKS.github}
+							target='_blank'
+							icon={<GithubIcon typeIcon='sm' color='#ffffff' />}
+						/>
+						<ButtonAnchor
+							typeBtn='transparent'
+							href={LINKS.linkedin}
+							target='_blank'
+							icon={<Linkedin typeIcon='sm' color='#ffffff' />}
+						/>
 					</div>
 				</div>
 			</div>

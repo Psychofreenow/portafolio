@@ -1,13 +1,8 @@
 .icon {
 	width: fit-content;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	gap: 1rem;
 	font-size: var(--fs-base);
 	font-weight: var(--fw-title);
 	color: var(--c-tertiary);
+	text-align: center;
 }
-
-/* .icon {
-} */

@@ -1,19 +1,12 @@
 import Icon from '.';
 
-function Xicon({ title, typeIcon, color, onClick, className }) {
+function Xicon({ title, typeIcon, color, onClick, st }) {
 	return (
-		<Icon
-			title={title}
-			typeIcon={typeIcon}
-			onClick={onClick}
-			className={className}
-		>
+		<Icon title={title} typeIcon={typeIcon} onClick={onClick} st={st}>
 			<svg
 				viewBox='0 -0.5 21 21'
 				version='1.1'
 				style={{
-					width: `inherit`,
-					height: `inherit`,
 					fill: `${color}`,
 					cursor: 'pointer',
 				}}
@@ -31,7 +24,9 @@ function Xicon({ title, typeIcon, color, onClick, className }) {
 					<g
 						id='Dribbble-Light-Preview'
 						transform='translate(-419.000000, -240.000000)'
-						fill='#000000'
+						style={{
+							fill: `${color}`,
+						}}
 					>
 						<g id='icons' transform='translate(56.000000, 160.000000)'>
 							<polygon

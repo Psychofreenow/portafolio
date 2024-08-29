@@ -33,6 +33,8 @@ const updateTables = async () => {
 			await preCreateData(Projects, [
 				{
 					name: 'hola1',
+					descriptionOfProject:
+						'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at magna non urna finibus tincidunt sit amet at sapien. Aliquam erat volutpat. In non dui faucibus magna interdum commodo ut eu nisi. Maecenas congue auctor tortor, at imperdiet tellus feugiat volutpat. Quisque vehicula velit purus, vel posuere elit commodo non. Integer nibh neque, congue eget accumsan vel, imperdiet id tellus. Nunc nec orci dui.',
 					repository: 'https://github.com/Psychofreenow/portafolio',
 					images:
 						'https://pcfcdn.kommo.com/static/assets/images/integrations/en/paypal-logo-promo.png',
@@ -41,6 +43,8 @@ const updateTables = async () => {
 				},
 				{
 					name: 'hola2',
+					descriptionOfProject:
+						'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at magna non urna finibus tincidunt sit amet at sapien. Aliquam erat volutpat. In non dui faucibus magna interdum commodo ut eu nisi. Maecenas congue auctor tortor, at imperdiet tellus feugiat volutpat. Quisque vehicula velit purus, vel posuere elit commodo non. Integer nibh neque, congue eget accumsan vel, imperdiet id tellus. Nunc nec orci dui.',
 					repository: 'https://github.com/Psychofreenow/portafolio',
 					images:
 						'https://pcfcdn.kommo.com/static/assets/images/integrations/en/paypal-logo-promo.png',
@@ -49,6 +53,8 @@ const updateTables = async () => {
 				},
 				{
 					name: 'hola3',
+					descriptionOfProject:
+						'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at magna non urna finibus tincidunt sit amet at sapien. Aliquam erat volutpat. In non dui faucibus magna interdum commodo ut eu nisi. Maecenas congue auctor tortor, at imperdiet tellus feugiat volutpat. Quisque vehicula velit purus, vel posuere elit commodo non. Integer nibh neque, congue eget accumsan vel, imperdiet id tellus. Nunc nec orci dui.',
 					repository: 'https://github.com/Psychofreenow/portafolio',
 					images:
 						'https://pcfcdn.kommo.com/static/assets/images/integrations/en/paypal-logo-promo.png',

@@ -16,9 +16,11 @@ button {
 	background-color: inherit;
 	border-radius: inherit;
 	font-size: inherit;
-	display: block;
 	padding: 1rem 2rem;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 
 /*TYPE BUTTONS*/

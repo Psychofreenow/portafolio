@@ -1,8 +1,8 @@
 import Icon from '.';
 
-function JavascriptIcon({ title, typeIcon }) {
+function JavascriptIcon({ title, typeIcon, color, onClick, st }) {
 	return (
-		<Icon title={title} typeIcon={typeIcon}>
+		<Icon title={title} typeIcon={typeIcon} onClick={onClick} st={st}>
 			<svg
 				viewBox='0 0 256 256'
 				version='1.1'

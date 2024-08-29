@@ -12,16 +12,22 @@ function Nav({ open, handleClick }) {
 
 	return (
 		<nav className={classNames}>
-			<Xicon className={styles.xicon} onClick={handleClick} typeIcon='sm' />
-			<ButtonLink buttonText='home' to='/home' typeBtn='transparent' />
+			<div className={styles.xicon}>
+				<Xicon onClick={handleClick} typeIcon='sm' color='#000' />
+			</div>
+			<ButtonAnchor buttonText='home' href='#home' typeBtn='transparent' />
 			<ButtonAnchor
 				buttonText='proyectos'
 				href='#projects'
 				typeBtn='transparent'
 			/>
 			<ButtonAnchor buttonText='about' href='#about' typeBtn='transparent' />
-			<ButtonLink buttonText='Blog' to='/blog' typeBtn='transparent' />
-			<ButtonLink buttonText='contacto' to='/contact' typeBtn='transparent' />
+			<ButtonLink buttonText='Blog' to='#' typeBtn='transparent' />
+			<ButtonAnchor
+				buttonText='contacto'
+				href='#contact'
+				typeBtn='transparent'
+			/>
 		</nav>
 	);
 }

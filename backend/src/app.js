@@ -6,6 +6,7 @@ import articleRouter from './routes/articles.js';
 import categoryRouter from './routes/categories.js';
 import userRouter from './routes/users.js';
 import authRouter from './routes/auth.js';
+import contactFormRouter from './routes/contactForm.js';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 import cors from 'cors';
@@ -24,6 +25,7 @@ app.use('/api/articles', articleRouter);
 app.use('/api/categories', categoryRouter);
 app.use('/api/users', userRouter);
 app.use('/api/auth', authRouter);
+app.use('/api/contact-form', contactFormRouter);
 
 //EXPRESS ERRORS HANDLE
 app.use(errorsHandle);

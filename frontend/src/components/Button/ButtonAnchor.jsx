@@ -8,12 +8,12 @@ function ButtonAnchor({
 	typeBtn,
 	size,
 	center,
-	children,
+	icon,
 }) {
 	return (
 		<Button onClick={onClick} typeBtn={typeBtn} size={size} center={center}>
 			<a href={href} target={target}>
-				{children}
+				{icon}
 				{buttonText}
 			</a>
 		</Button>

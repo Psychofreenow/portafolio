@@ -6,7 +6,6 @@ import ReactIcon from '../../components/Icon/ReactIcon';
 import NodeIcon from '../../components/Icon/NodeIcon';
 import ExpressIcon from '../../components/Icon/ExpressIcon';
 import MySqlIcon from '../../components/Icon/MySqlIcon';
-import ButtonLink from '../../components/Button/ButtonLink';
 
 function MyHabilities() {
 	return (
@@ -29,7 +28,6 @@ function MyHabilities() {
 					<MySqlIcon title='MySql' />
 				</div>
 			</div>
-			<ButtonLink buttonText='Contáctame' typeBtn='red' center />
 		</section>
 	);
 }
